@@ -1,0 +1,29 @@
+@import '../../../sass/globals';
+
+$size: 80px;
+
+.loading-container {
+    @include flex();
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.lds-dual-ring {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #cccccc transparent #cccccc transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+
+@keyframes lds-dual-ring {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}

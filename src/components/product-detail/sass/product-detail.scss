@@ -1,0 +1,107 @@
+@import '../../../sass/globals';
+@import '../../../sass/button.scss';
+
+.product-detail {
+    width: calc(100vw - 20%);
+    height: calc(100vh - 170px);
+    margin: auto;
+    display: flex;
+    border: 1px solid lightgray;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-detail__img-container {
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid lightgray;
+    padding: 30px;
+
+    > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.product-detail__info {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.product-detail__info__title {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    padding: 7px 0px;
+}
+
+.product-detail__info__category {
+    color: gray;
+    width: max-content;
+    padding-inline: 5px;
+    padding-block-end: 3px;
+    background-color: #d3d3d379;
+}
+
+.product-detail__info__description {
+    border-left: 1px solid rgb(202, 202, 202);
+    border-right: 1px solid rgb(202, 202, 202);
+    flex: 1;
+    max-height: auto;
+    overflow-y: auto;
+    padding: 10px;
+    line-height: 1.4;
+    background-image: linear-gradient(to right, #d3d3d357, white);
+}
+
+.product-detail__info__buttons {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include btn;
+}
+
+.product-detail__info__buttons__price-tag {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    
+    .tag {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 20px solid transparent;
+        border-right: 20px solid #487586;
+        border-bottom: 20px solid transparent;
+    }
+
+    .price {
+        color: white;
+        width: 100px;
+        height: 40px;
+        background-color: #487586;
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        
+        &::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: 15%;
+        }
+    }
+}

@@ -1,0 +1,7 @@
+$layoutTextColor: #8d61c7;
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
